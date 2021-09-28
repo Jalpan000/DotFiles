@@ -317,7 +317,7 @@ myManageHook = composeAll
     , className =? "notification"   --> doFloat
     , className =? "splash"         --> doFloat
     , className =? "toolbar"        --> doFloat
-    , className =? "ksnip"	    --> doFloat
+    , className =? "ksnip"          --> doFloat
     , (className =? "firefox" <&&> resource =? "Dialog") --> doFloat    -- Float Firefox Dialog
     , isFullscreen -->  doFullFloat
     ] <+> namedScratchpadManageHook myScratchPads
@@ -439,11 +439,11 @@ myKeys =
         , ("<XF86AudioPrev>", spawn "clementine -r")
         , ("<XF86AudioNext>", spawn "clementine -f")
         , ("<XF86AudioMute>", spawn "pamixer -t")
-	--  , ("<XF86AudioMute>", spawn "pactl set-sink-mute @DEFAULT_SINK@ toggle")
-	    , ("<XF86AudioLowerVolume>", spawn "pamixer -d 5 -u")
-    --  , ("<XF86AudioLowerVolume>", spawn "pactl set-sink-volume @DEFAULT_SINK@ -5%")
+        -- , ("<XF86AudioMute>", spawn "pactl set-sink-mute @DEFAULT_SINK@ toggle")
+        , ("<XF86AudioLowerVolume>", spawn "pamixer -d 5 -u")
+        -- , ("<XF86AudioLowerVolume>", spawn "pactl set-sink-volume @DEFAULT_SINK@ -5%")
         , ("<XF86AudioRaiseVolume>", spawn "pamixer -i 5 -u")
-    --  , ("<XF86AudioRaiseVolume>", spawn "pactl set-sink-volume @DEFAULT_SINK@ +5%")
+        -- , ("<XF86AudioRaiseVolume>", spawn "pactl set-sink-volume @DEFAULT_SINK@ +5%")
         , ("<XF86Search>", spawn "dm-websearch")
         , ("<XF86MonBrightnessUp>", spawn "lux -a 5%")
         , ("<XF86MonBrightnessDown>", spawn "lux -s 5%")
