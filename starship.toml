@@ -19,19 +19,19 @@ disabled = false
  [└─>](bold green) """
 
 [battery]
-full_symbol = " 🔋"
-charging_symbol = " ⚡️"
-discharging_symbol = " 💀"
+full_symbol = "  "
+charging_symbol = " ⚡️ "
+discharging_symbol = "  "
 
-[[battery.display]]  # "bold red" style and discharging_symbol when capacity is between 0% and 10%
+[[battery.display]]  # "bold red" style and  when capacity is between 0% and 10%
 threshold = 10
 style = "bold red"
 
-[[battery.display]]  # "bold yellow" style and 💀 symbol when capacity is between 10% and 30%
+[[battery.display]]  # "bold yellow" style and  symbol when capacity is between 10% and 30%
 threshold = 30
 style = "bold yellow"
 
-[[battery.display]]  # "bold yellow" style and 🔋 symbol when capacity is between 30% and 100%
+[[battery.display]]  # "bold yellow" style and  symbol when capacity is between 30% and 100%
 threshold = 100
 style = "bold green"
 
