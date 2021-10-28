@@ -18,16 +18,16 @@ Config  { font            = "xft:Ubuntu Font:weight=bold:pixelsize=10:regular:an
                                             , "--low",      "green"
                                             , "--normal",   "orange"
                                             , "--high",     "red"
-                                            ] 20
+                                            ] 50
                         , Run Memory        [ "--template", "<fn=2>\xf233</fn> <usedratio>%"
                                             , "--Low",      "40"      -- units: %
                                             , "--High",     "85"      -- units: %
                                             , "--low",      "green"
                                             , "--normal",   "gold"
                                             , "--high",     "red"
-                                            ] 20
+                                            ] 50
                         , Run DynNetwork    [ "-t",          "<fn=2>\xf0ab</fn> <rx>kb <fn=2>\xf0aa</fn> <tx>kb"] 10
-                        , Run Brightness    [ "-t",         "<fn=2>\xf0eb</fn> <percent>%", "--", "-D", "intel_backlight" ] 1
+                        , Run Brightness    [ "-t",         "<fn=2>\xf0eb</fn> <percent>%", "--", "-D", "intel_backlight" ] 3
                         , Run Volume 	      "default"     "Master"
                                             [ "-t",         "<status>", "--"
                                             , "--on",       ""
@@ -37,7 +37,7 @@ Config  { font            = "xft:Ubuntu Font:weight=bold:pixelsize=10:regular:an
                                             , "-h",         "<fc=#dc322f><fn=2>\xf028</fn> <volume>%</fc>"
                                             , "-m",         "<fc=#FAD900><fn=2>\xf027</fn> <volume>%</fc>"
                                             , "-l",         "<fc=#00C72B><fn=2>\xf026</fn> <volume>%</fc>"
-                                            ] 1
+                                            ] 3 
                         , Run Battery       [ "--template", "<acstatus>"
                                             , "--Low",      "20"       -- units: %
                                             , "--High",     "80"       -- units: %
@@ -53,8 +53,8 @@ Config  { font            = "xft:Ubuntu Font:weight=bold:pixelsize=10:regular:an
                                             , "-i",         "<fn=2>\xf240</fn> <fc=#006000>Charged</fc> <left>%"
                                             , "-a",         "notify-send -u critical 'Battery running out!!'"
                                             , "-A",         "15"
-                                            ] 60
-                        , Run Date 	    "<fn=2>\xf017</fn> %H:%M:%S %m/%d/%Y" "date" 1
+                                            ] 600
+                        , Run Date 	    "<fn=2>\xf017</fn> %H:%M %m/%d/%Y" "date" 600 
                         -- , Run Com "/home/jal/.config/xmobar/trayer-padding-icon.sh" [] "trayerpad" 10
                        	]
     , sepChar   =  "%"

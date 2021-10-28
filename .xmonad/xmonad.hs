@@ -333,7 +333,7 @@ myKeys =
         , ("M-S-/", spawn "~/.xmonad/xmonad_keys.sh")
 
     -- KB_GROUP Run Prompt
-        , ("M-S-<Return>", spawn "dmenu_run -fn 'Nerd Font:bold:size=9:antialias=true:hinting=true' -i -p \"Run: \"") -- Dmenu
+        , ("M-S-<Return>", spawn "dmenu_run -fn 'Mononki Nerd Font:regular:size=10:antialias=true:hinting=true' -i -p \"Run: \"") -- Dmenu
 
     -- KB_GROUP Other Dmenu Prompts
     -- In Xmonad and many tiling window managers, M-p is the default keybinding to
