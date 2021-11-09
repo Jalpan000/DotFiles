@@ -447,8 +447,8 @@ myKeys =
         -- , ("<XF86AudioRaiseVolume>", spawn "pactl set-sink-volume @DEFAULT_SINK@ +5%")
         -- , ("<XF86Search>", spawn "dm-websearch")
         , ("<XF86MonBrightnessUp>", spawn "brightnessctl s 5%+")
-	-- , ("<XF86MonBrightnessUp>", spawn "lux -a 5%")
-	, ("<XF86MonBrightnessDown>", spawn "brightnessctl s 5%-")
+	    -- , ("<XF86MonBrightnessUp>", spawn "lux -a 5%")
+	    , ("<XF86MonBrightnessDown>", spawn "brightnessctl s 5%-")
         -- , ("<XF86MonBrightnessDown>", spawn "lux -s 5%")
         ]
     -- The following lines are needed for named scratchpads.
