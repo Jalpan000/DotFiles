@@ -99,7 +99,7 @@ windowCount = gets $ Just . show . length . W.integrate' . W.stack . W.workspace
 
 myStartupHook :: X ()
 myStartupHook = do
-    spawnOnce "lxsession &"
+    -- spawnOnce "lxsession &"
     spawnOnce "picom &"
     -- spawnOnce "volumeicon -d 'HDA Intel PCH' &"
     -- spawnOnce "conky -c /home/jal/.config/conky/.conkyrc"
@@ -440,16 +440,10 @@ myKeys =
         , ("<XF86AudioPrev>", spawn "playerctl previous")
         , ("<XF86AudioNext>", spawn "playerctl next")
         , ("<XF86AudioMute>", spawn "pamixer -t")
-        -- , ("<XF86AudioMute>", spawn "pactl set-sink-mute @DEFAULT_SINK@ toggle")
         , ("<XF86AudioLowerVolume>", spawn "pamixer -d 5 -u")
-        -- , ("<XF86AudioLowerVolume>", spawn "pactl set-sink-volume @DEFAULT_SINK@ -5%")
         , ("<XF86AudioRaiseVolume>", spawn "pamixer -i 5 -u")
-        -- , ("<XF86AudioRaiseVolume>", spawn "pactl set-sink-volume @DEFAULT_SINK@ +5%")
-        -- , ("<XF86Search>", spawn "dm-websearch")
         , ("<XF86MonBrightnessUp>", spawn "brightnessctl s 5%+")
-	    -- , ("<XF86MonBrightnessUp>", spawn "lux -a 5%")
-	    , ("<XF86MonBrightnessDown>", spawn "brightnessctl s 5%-")
-        -- , ("<XF86MonBrightnessDown>", spawn "lux -s 5%")
+        , ("<XF86MonBrightnessDown>", spawn "brightnessctl s 5%-")
         ]
     -- The following lines are needed for named scratchpads.
             where nonNSP          = WSIs (return (\ws -> W.tag ws /= "NSP"))
